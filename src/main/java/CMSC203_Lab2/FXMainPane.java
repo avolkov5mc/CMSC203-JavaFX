@@ -50,9 +50,11 @@ public class FXMainPane extends VBox {
 		
 		//student Task #3:
 		//  add the label and textfield to one of the HBoxes
+		hbox2.getChildren().addAll(l1, textField);
 		//  add the buttons to the other HBox
+		hbox1.getChildren().addAll(b1,b2,b3,b4,b5);
 		//  add the HBoxes to this FXMainPanel (a VBox)
-		
+		getChildren().addAll(hbox1, hbox2);
 	}
 	
 	//Task #4:
