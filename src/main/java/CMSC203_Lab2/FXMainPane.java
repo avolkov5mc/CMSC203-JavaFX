@@ -1,5 +1,9 @@
 package CMSC203_Lab2;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 /**
@@ -28,8 +32,18 @@ public class FXMainPane extends VBox {
 	FXMainPane() {
 		//student Task #2:
 		//  instantiate the buttons, label, and textfield
+		Button b1 = new Button("Hello");
+		Button b2 = new Button("Howdy");
+		Button b3 = new Button("Chinese");
+		Button b4 = new Button("Clear");
+		Button b5 = new Button("Exit");
+		Label l1 = new Label("Feedback:");
+		TextField textField = new TextField("");
+
 		//  instantiate the HBoxes
-		
+		HBox hbox1 = new HBox();
+		HBox hbox2 = new HBox();
+
 		//student Task #4:
 		//  instantiate the DataManager instance
 		//  set margins and set alignment of the components
