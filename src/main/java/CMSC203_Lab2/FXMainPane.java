@@ -19,10 +19,21 @@ public class FXMainPane extends VBox {
 
 	//student Task #2:
 	//  declare five buttons, a label, and a textfield
+	private Button b1;
+	private Button b2;
+	private Button b3;
+	private Button b4;
+	private Button b5;
+	private Label l1;
+	private TextField textField;
+
 	//  declare two HBoxes
-	
+	private HBox hbox1;
+	private HBox hbox2;
+
 	//student Task #4:
 	//  declare an instance of DataManager
+
 	/**
 	 * The MainPanel constructor sets up the entire GUI in this approach.  Remember to
 	 * wait to add a component to its containing component until the container has
@@ -32,17 +43,17 @@ public class FXMainPane extends VBox {
 	FXMainPane() {
 		//student Task #2:
 		//  instantiate the buttons, label, and textfield
-		Button b1 = new Button("Hello");
-		Button b2 = new Button("Howdy");
-		Button b3 = new Button("Chinese");
-		Button b4 = new Button("Clear");
-		Button b5 = new Button("Exit");
-		Label l1 = new Label("Feedback:");
-		TextField textField = new TextField("");
+		b1 = new Button("Hello");
+		b2 = new Button("Howdy");
+		b3 = new Button("Chinese");
+		b4 = new Button("Clear");
+		b5 = new Button("Exit");
+		l1 = new Label("Feedback:");
+		textField = new TextField("");
 
 		//  instantiate the HBoxes
-		HBox hbox1 = new HBox();
-		HBox hbox2 = new HBox();
+		hbox1 = new HBox();
+		hbox2 = new HBox();
 
 		//student Task #4:
 		//  instantiate the DataManager instance
