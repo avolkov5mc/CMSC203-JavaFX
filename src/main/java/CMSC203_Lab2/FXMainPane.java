@@ -3,6 +3,8 @@ package CMSC203_Lab2;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -69,7 +71,18 @@ public class FXMainPane extends VBox {
 		//  instantiate the DataManager instance
 		dm = new DataManager();
 		//  set margins and set alignment of the components
-		
+		Insets margins = new Insets(10,10,10,10);
+		HBox.setMargin(b1, margins);
+		HBox.setMargin(b2, margins);
+		HBox.setMargin(b3, margins);
+		HBox.setMargin(b4, margins);
+		HBox.setMargin(b5, margins);
+		HBox.setMargin(l1, margins);
+		HBox.setMargin(textField, margins);
+		// align
+		hbox1.setAlignment(Pos.CENTER);
+		hbox2.setAlignment(Pos.CENTER);
+
 		//student Task #3:
 		//  add the label and textfield to one of the HBoxes
 		hbox2.getChildren().addAll(l1, textField);
