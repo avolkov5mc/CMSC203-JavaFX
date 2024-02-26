@@ -1,5 +1,8 @@
 package CMSC203_Lab2;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -33,6 +36,7 @@ public class FXMainPane extends VBox {
 
 	//student Task #4:
 	//  declare an instance of DataManager
+	private DataManager dm;
 
 	/**
 	 * The MainPanel constructor sets up the entire GUI in this approach.  Remember to
@@ -44,10 +48,16 @@ public class FXMainPane extends VBox {
 		//student Task #2:
 		//  instantiate the buttons, label, and textfield
 		b1 = new Button("Hello");
+		b1.setOnAction(new ButtonHandler());
 		b2 = new Button("Howdy");
+		b2.setOnAction(new ButtonHandler());
 		b3 = new Button("Chinese");
+		b3.setOnAction(new ButtonHandler());
 		b4 = new Button("Clear");
+		b4.setOnAction(new ButtonHandler());
 		b5 = new Button("Exit");
+		b5.setOnAction(new ButtonHandler());
+
 		l1 = new Label("Feedback:");
 		textField = new TextField("");
 
@@ -57,6 +67,7 @@ public class FXMainPane extends VBox {
 
 		//student Task #4:
 		//  instantiate the DataManager instance
+		dm = new DataManager();
 		//  set margins and set alignment of the components
 		
 		//student Task #3:
@@ -70,5 +81,26 @@ public class FXMainPane extends VBox {
 	
 	//Task #4:
 	//  create a private inner class to handle the button clicks
+	public class ButtonHandler implements EventHandler<ActionEvent> {
+		@Override
+		public void handle(ActionEvent event) {
+			if(b1.equals(event.getTarget())) {
+				textField.setText(dm.getHello());
+			}
+			else if(b2.equals(event.getTarget())) {
+				textField.setText(dm.getHowdy());
+			}
+			else if(b3.equals(event.getTarget())) {
+				textField.setText(dm.getChinese());
+			}
+			else if(b4.equals(event.getTarget())) {
+				textField.setText("");
+			}
+			else if(b5.equals(event.getTarget())) {
+				Platform.exit();
+				System.exit(0);
+			}
+		}
+	}
 }
 	
