@@ -1,5 +1,4 @@
-
-
+package CMSC203_Lab2;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

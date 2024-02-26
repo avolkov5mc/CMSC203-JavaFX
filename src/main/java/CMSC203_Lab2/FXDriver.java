@@ -1,12 +1,10 @@
-
-
+package CMSC203_Lab2;
 
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 
 public class FXDriver extends Application {
 	   

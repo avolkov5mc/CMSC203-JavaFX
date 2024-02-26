@@ -1,5 +1,4 @@
-
-
+package CMSC203_Lab2;
 
 /**
  * The DataManager class should never depend on the GUI, but rather the reverse. 
